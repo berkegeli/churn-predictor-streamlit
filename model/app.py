@@ -4,8 +4,9 @@ import pickle
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+with open("model/xgboost_model.pkl", "rb") as f:
+    model = pickle.load(f)
 
-with open("C:/Users/BERK/PycharmProjects/churn_project/model/xgboost_model.pkl", "rb") as f: model = pickle.load(f)
 
 st.set_page_config(page_title="Churn Prediction App", layout="centered")
 
@@ -136,7 +137,5 @@ if st.button("Tahmin Et"):
     else:
         st.error("Tahmin yapılırken hata oluştu.")
 
-git add model/xgboost_model.pkl model/app.py
-git commit -m "Fix model path for Streamlit Cloud"
-git push origin main
+
 
