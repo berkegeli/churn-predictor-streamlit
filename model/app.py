@@ -136,4 +136,7 @@ if st.button("Tahmin Et"):
     else:
         st.error("Tahmin yapılırken hata oluştu.")
 
+git add model/xgboost_model.pkl model/app.py
+git commit -m "Fix model path for Streamlit Cloud"
+git push origin main
 
